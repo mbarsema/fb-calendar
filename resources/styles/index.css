@@ -1,0 +1,67 @@
+body {
+  font-family: Lucida Grande, Tahoma, sans-serif;
+}
+#calendar {
+  width: 600px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-height: 720px;
+}
+.timeline {
+  float: left;
+  width: 10%;
+  box-sizing: border-box;
+  min-height: 720px;
+  background-color: white;
+}
+.events {
+  float: left;
+  width: 90%;
+  box-sizing: border-box;
+  background-color: #ececec;
+  min-height: 720px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow-x: scroll;
+}
+.tick {
+  height: 30px;
+}
+.major {
+  font-size: 0.7em;
+  text-align: right;
+}
+.minor {
+  text-align: right;
+  font-size: 0.7em;
+}
+
+.event {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #9d9d9d;
+	border-radius: 2px;
+	background-color: white;
+	border-left-width: 4px;
+	border-left-color: #004fa1;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding: 5px;
+	position: absolute;
+	overflow-y: scroll;
+}
+
+.eventHeader {
+  font-size: 0.9em;
+  color: #4e73b3;
+}
+.eventLocation {
+  font-size: 0.85em;
+  color: #9d9d9d;
+}
+
+.time {
+    font-size: 1.2em;
+}
