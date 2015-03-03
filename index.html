@@ -14,38 +14,15 @@
 		 * @return none
 		 * @param events - An array of objects that are used for our calendar
 		 */
-		var eventsCalendar = null;
-		 
 		function layOutDay( events ){
-			var startDateTime = new Date();
-			startDateTime.setHours(9);
-			startDateTime.setMinutes(0);
-			startDateTime.setSeconds(0);
-						
-			var endDateTime = new Date();
-			endDateTime.setHours(21);
-			endDateTime.setMinutes(0);
-			endDateTime.setSeconds(0);
-			
-			var eventsCalendar = new Calendar(
-				events,
-				{'startDateTime': startDateTime,'endDateTime': endDateTime, 'ticks': '24'},
-				{'eventPaddingTop': 5, 'eventPaddingBottom': 5, 'eventPaddingLeft': 5, 'eventPaddingRight': 5, 
-				 'eventBorderWidthLeft': 4, 'eventBorderWidthRight': 1, 'eventBorderWidthTop': 1, 'eventBorderWidthBottom': 1,
-				 'paddingLeft': 10, 'paddingRight': 10, 'width': 540},
-				document.getElementById('calendar')
-			);		
+			if( eventsCalendar ){
+				eventsCalendar.load( events );
+				return;
+			}
+			eventsCalendar = new Calendar( document.getElementById('calendar'), events );
 		}
-		
-		var events = [{start: 30, end: 150},
-					  {start: 60, end: 160},
-					  {start: 161, end: 300},
-					  {start: 540, end: 600}, 
-					  {start: 560, end: 620},
-					  {start: 570, end: 630},
-					  {start: 610, end: 670},
-					  {start: 671, end: 700}
-		];
+		var eventsCalendar = null;
+		var events = [ {start: 30, end: 150}, {start: 540, end: 600}, {start: 560, end: 620}, {start: 610, end: 670} ];
 		layOutDay( events );
 	</script>
 </body>
